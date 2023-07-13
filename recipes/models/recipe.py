@@ -20,3 +20,4 @@ class Recipe(models.Model):
     chef = models.ForeignKey(Chef, on_delete=models.CASCADE)
     ingredients = models.ManyToManyField(Ingredient)
     categories = models.ManyToManyField(Category)
+    created_at = models.DateTimeField(auto_now_add=True)
