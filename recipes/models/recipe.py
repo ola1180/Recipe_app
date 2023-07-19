@@ -13,13 +13,14 @@ class Recipe(models.Model):
         chef (ForeignKey)
         ingredients (ManyToManyField)
         categories (ManyToManyField)
+        photo (ImageField)
     """
 
     title = models.CharField(max_length=50)
     description = models.CharField(max_length=200)
     chef = models.ForeignKey(Chef, on_delete=models.CASCADE)
     ingredients = models.ManyToManyField(Ingredient)
-    preparation = models.TextField
+    preparation = models.TextField(blank=True)
     categories = models.ManyToManyField(Category)
     created_at = models.DateTimeField(auto_now_add=True)
     photo = models.ImageField(upload_to='images', default='image')

@@ -1,0 +1,24 @@
+{% extends 'recipes/base.html' %}
+
+{% block content %}
+<div class="container-fluid ">
+
+    <div class="row g-3">
+        {% for chef in chefs %}
+
+        <div class="col-12 col-md-6 col-lg-3">
+            <div class="card h-100">
+                <div class="image-profile"><img src="../../{{chef.profile_photo}}" alt="Card image cap"></div>
+                <div class="chef-content">
+                    <h5 class="chef-name ">{{ chef.name }}</h5>
+                    <p class="chef-bio">{{ chef.bio|linebreaksbr }}</p>
+                    <a href="">See recipes</a>
+                </div>
+            </div>
+        </div>
+
+        {% endfor %}
+
+    </div>
+</div>
+{% endblock %}
