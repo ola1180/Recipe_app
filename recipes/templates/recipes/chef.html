@@ -10,9 +10,9 @@
             <div class="card h-100">
                 <div class="image-profile"><img src="../../{{chef.profile_photo}}" alt="Card image cap"></div>
                 <div class="chef-content">
-                    <h5 class="chef-name ">{{ chef.name }}</h5>
+                    <h5 class="chef-name">{{ chef.name }}</h5>
                     <p class="chef-bio">{{ chef.bio|linebreaksbr }}</p>
-                    <a href="">See recipes</a>
+                    <a href="{% url 'chef_profile_page' pk=chef.pk %}">See recipes</a>
                 </div>
             </div>
         </div>

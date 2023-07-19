@@ -17,5 +17,11 @@ def chef(request):
     return render(request, '../templates/recipes/chef.html', {'chefs': chefs})
 
 
+def chef_profile(request, pk):
+    chef = get_object_or_404(Chef, pk=pk)
+    chef_recipes = Recipe.objects.filter(chef=pk)
+    return render(request, '../templates/recipes/chef_profile.html', {'chef': chef, 'chef_recipes':chef_recipes})
+
+
 def category(request):
     return render(request, '../templates/recipes/category.html')
