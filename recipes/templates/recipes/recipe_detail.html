@@ -1,8 +1,17 @@
-{% extends 'recipes/home.html' %}
+{% extends 'recipes/base.html' %}
 
 {% block content %}
-<div class="recipe">
-    <h2>{{ Recipe.title }}</h2>
-    <p>{{ Recipe.description }}</p>
-</div>
+
+    <div class="recipe row">
+        <div class="col content">
+            <h2>{{ recipe.title }}</h2>
+            <p>{{ recipe.description|linebreaksbr }}</p>
+            {% for item in recipe.ingredients.all %}
+            <p class="ingridients"><b>{{item.name}}</b> {{item.quantity}}</p>
+            {% endfor %}
+            <p>{{recipe.preparation}}</p>
+        </div>
+        <div class="col image"><img src="../../{{recipe.photo}}" alt="Card image cap"></div>
+    </div>
+
 {% endblock %}

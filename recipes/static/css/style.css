@@ -1,0 +1,118 @@
+/*base*/
+
+.container-fluid {
+  padding: 80px 15px 0 15px;
+}
+
+p {
+font-family: 'Montserrat', sans-serif;
+margin:0;
+}
+
+h1, h2, h3, h4 ,h5 {
+font-family: 'Playfair Display', serif;
+}
+
+h2 {
+font-size: 56px;
+}
+
+h5 {
+font-size: 26px;
+}
+
+
+
+/*home*/
+
+.col-12 {
+padding: 0 5px 10px 5px;}
+
+.recipe-card {
+  color: #000;
+  position: relative;
+  text-decoration: none;
+}
+
+.recipe-card:hover {
+ text-decoration: none;
+ color: #000;
+
+}
+
+.recipe-card::before {
+  background: hsla(360, 100%, 100%, 0.59);
+  content: "";
+  inset: 0;
+  position: absolute;
+  width: 0;
+  transition: 0.5s ease-in-out;
+  z-index: 100;
+
+}
+
+.recipe-card:hover::before {
+  width: 100%;
+}
+
+
+.card {
+  border-radius: 0;
+}
+
+.card-body {
+display:flex;
+height:100%;
+flex-direction:column;
+}
+
+.image {
+height:50%;
+}
+
+.card-img-top {
+border-radius: 0;
+}
+
+.date {
+font-size: 12px;
+}
+
+.card-text {
+flex-grow: 1;
+}
+
+/*recipe detail*/
+
+.recipe {
+height: 100vh;
+}
+
+
+.image {
+height:100%;
+}
+
+img {
+display:block;
+width:100%;
+height:100%;
+object-fit: cover;
+}
+
+.content {
+padding: 100px 60px 60px 60px;
+overflow: auto;
+height:100%;
+}
+
+
+.content p {
+margin: 15px 0 10px 0;
+}
+
+.content .ingridients {
+margin: 8px 0 0 10px;
+border-left: 1px solid black;
+padding: 0 0 0 10px;
+}
