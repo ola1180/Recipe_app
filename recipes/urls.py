@@ -9,7 +9,7 @@ urlpatterns = [
     path('recipe/<int:pk>/', views.recipe_detail, name="recipe_detail_page"),
     path('chefs/', views.chef, name="chef_page"),
     path('chef_profile/<int:pk>/', views.chef_profile, name="chef_profile_page"),
-    path('categories/', views.category, name="category_page"),
+    path('category/<int:pk>/', views.category, name="category"),
 
 ]
 
