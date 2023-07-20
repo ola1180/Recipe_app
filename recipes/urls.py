@@ -10,6 +10,7 @@ urlpatterns = [
     path('chefs/', views.chef, name="chef_page"),
     path('chef_profile/<int:pk>/', views.chef_profile, name="chef_profile_page"),
     path('category/<int:pk>/', views.category, name="category"),
+    path('recipe/new/', views.recipe_new, name='recipe_new'),
 
 ]
 
