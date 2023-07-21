@@ -115,3 +115,10 @@ margin: 8px 0 0 10px;
 border-left: 1px solid black;
 padding: 0 0 0 10px;
 }
+/*sign up*/
+
+.signup_form {
+display: flex;
+flex-direction: column;
+width: 50%;
+}

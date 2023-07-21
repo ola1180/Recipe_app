@@ -9,7 +9,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&display=swap"
           rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+          integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
 </head>
 <body>
 <div class="page-header">
@@ -39,13 +41,19 @@
                 </li>
 
             </ul>
+
+            <a href="{% url 'signup'%}" class="top-menu">Sign up</a>
+            <a href="{% url 'recipe_new'%}" class="top-menu">Add recipe<i class="fa-solid fa-plus"
+                                                                          style="color: #000000;"></i></a>
+
             <form class="form-inline my-2 my-lg-0">
-                                <a href="{% url 'recipe_new'%}" class="top-menu">Add recipe<i class="fa-solid fa-plus" style="color: #000000;"></i></a>
 
                 <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
                 <button class="btn btn-outline-dark" type="submit">Search</button>
 
             </form>
+
+
         </div>
     </nav>
 </div>
