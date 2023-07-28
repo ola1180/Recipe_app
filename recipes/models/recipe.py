@@ -23,4 +23,4 @@ class Recipe(models.Model):
     preparation = models.TextField(blank=True)
     categories = models.ManyToManyField(Category)
     created_at = models.DateTimeField(auto_now_add=True)
-    photo = models.ImageField(upload_to='images', default='image')
+    photo = models.ImageField(upload_to='images', default='user.png')

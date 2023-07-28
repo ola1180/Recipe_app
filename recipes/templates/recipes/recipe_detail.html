@@ -11,7 +11,8 @@
             {% endfor %}
             <p>{{recipe.preparation}}</p>
         </div>
-        <div class="col image"><img src="../../{{recipe.photo}}" alt="Card image cap"></div>
+        <div class="col image"><img src="{{recipe.photo.url}}"></div>
+
     </div>
 
 {% endblock %}

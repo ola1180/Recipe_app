@@ -12,5 +12,5 @@ class Chef(models.Model):
     """
     name = models.CharField(max_length=50)
     bio = models.TextField(blank=True)
-    profile_photo = models.ImageField(upload_to='images', default='image')
+    profile_photo = models.ImageField(upload_to='images', default='user.png')
 
